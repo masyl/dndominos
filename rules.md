@@ -57,7 +57,9 @@ The rules
 - The main goal of moving your hero is to reach a nearby room and try to loot it.
 - The maximum number of steps your hero can take is determined by the value of a dice throw.
 - Your not obliged to take all the steps. But you cannot split the available steps before and after your action.
+- You also have the option of not moving at all and simply pass.
 - Since you cannot have two heroes on the same tile, you can hop over any occupied tile.
+
 
 ### Revealing the dungeon
 
@@ -73,7 +75,10 @@ At the end of a turn, the player must place a domino from his hand on the board 
 - When placing a domino that will bridge two or more dominos, you only need to math the value of one other tile.
 - If a domino you have in hand cannot be place anywhere, it become a joker and you can place it next to other dominos without matching the value of the tile.
 
-Once the dungeon map is fully revealed, nothing special happens in the basic rules, but some extended rules can be used to change the game.
+Once the dungeon map is fully revealed, the rules get a few teaks to accelerate the game:
+
+- Every dice roll when looting a room get a +1 bonus.
+- Respawning rules change in favor of the respawning player.
 
 
 Actions
@@ -112,24 +117,24 @@ The ammount of gold coins dropped is the sum value of the four tiles composing t
 
 For example: two room dominos of 3:4 and 1:6 would total 14 gold coins.
 
+Once there is only one room remaining to loot (1 monster to fight), the rules get a few teaks to accelerate the game:
 
-### Fighting
+- Players user 5 dice instead of 4 to loot the room.
+- Players move with a second (2) dice.
 
-Gold coins can also be obtained by winning a fight against another hero that is standing on a adjacent tile.
 
-To attack, each player throws a dice and both values are compared.
+### Attacking
 
-Getting a higher value means you attack worked. Your victim drops for you an quantity of gold coins equal to the value of the dice.
+Gold coins can also be obtained by attacking another hero that is standing on a adjacent tile (not considering diagonals).
 
-Getting an equal value means you only made you victim trip over and they only drop one (1) gold coin. 
+The attacker first throws a dice, and the other player defends himself by also throwing a dice.
 
-Getting a lower value means that your attack failed and nothing comes of it.
-
-If the case that you attack with a dice value of 6 that is not parried by a 6, you victim is also left bloodied.
-
-If already bloodied, they die and must respawn.
-
-If the case that you attack yealds a dice value of only 1, it is a critical fail, you trip and fall flat on your face. Even if you had a move left, you cannot move to escape. Also, you drop one (1) gold coin that your victim picks up.
+The outcome of tyhe attack is resolved as such:
+- Getting a higher value means your attack worked. Your victim gets a beating and drops n quantity of gold coins equal to the value of the dice.
+- Getting an equal value means your only made you victim trip over and they only drop one (1) gold coin. 
+- Getting a lower value means that your attack failed and nothing comes of it.
+- The attacker getting a six (6) that is not also parried by a six (6), means the victim gets a beating and bloodied.
+- The attacker getting a 1 is a critical fail. You trip and fall flat on your face. The victim doesnt even need to throw a dice. Even if you had a move left, you cannot move to escape. Also, you drop one (1) gold coin that your victim picks up.
 
 ### Healing and Bloodied
 
@@ -149,11 +154,11 @@ Respawning
 
 Whenever a player dies (after getting a beating while already bloodied), it must respawn.
 
-The respawning rules depends on wether the map has been fully revealed or not.
+The respawning rules depends on wether the map has been fully revealed or not:
 
-If the map is still being revealed, players will respawn at the entrance of the dungeon on the first tile.
-
-If the map is already revealed, the player must throw two dice and fall on the corresponding domino.
+- If the map is still being revealed, players will respawn at the entrance of the dungeon on the first tile.
+- If the map is already fully revealed, the player must throw two dice and falls on the corresponding domino.
+- The player can choose to re-spawn once more if he doesnt like the new random spawn point.
 
 The player can choose which of the two dominno tiles he will land on. If both tiles are occupied, the player can select an adjacent tile of his choice.
 
@@ -183,7 +188,7 @@ Glossary
 - Tile: Each domino is considered to be composed of two tile, with each tile having it's own value.
 - Blank tile: One half of domino that has no number value.
 - Double-blank: The one domino that has two blank tiles, thus no value. This domino represents the spawn tile.
-- Spawn tile: The double-blank domino is where the player enters the dungeon. Also the place where the player are sent when bested in combat.
+- Spawn tile: The double-blank domino is where the player enters the dungeon. Also the place where the player might fall when respawning.
 - Room: Two dominoes placed side-by-side to form a square of 4 tiles or more (2 by 2).
 - Corridors: Path when players can move, formed by contiguously placing dominoes next to each others.
 - Rest: 
@@ -195,23 +200,23 @@ Glossary
 - Creatures: Represented by double-dominos, typically 
 - double-dominos: 
 - Hero:
-- Token: 
+- Token: The game piece that represents your hero and that you move over the domino tiles.
 - Bloodied: Your hero is not feeling well after having been bested in combat. You have -1 on dice throws for attack, defence and moving.
-- Death: 
-- Rat: 
-- Troll: 
-- Direwolf: 
-- Orc: 
-- Golem: 
-- Dragon: 
+- Death: When you get a beating while already bloodied. You must respawn.
+- Rat: Monster represented by the 1:1 domino.
+- Troll: Monster represented by the 2:2 domino.
+- Direwolf: Monster represented by the 3:3 domino.
+- Orc: Monster represented by the 4:4 domino.
+- Golem: Monster represented by the 5:5 domino.
+- Dragon: Monster represented by the 6:6 domino.
 
 Questions
 =========
 
 Q: Can corridors be placed to form loops ?
-A: Yes
+A: Yes. The domino your placing must have a matching value with at least one other domino.
 
-Q: Can you from a room by placing the domino accross two other dominos ?
+Q: Can you create a room by placing the domino accross two other dominos ?
 A: Yes
 
 Q: Can the game end the game before the map is fully revealed ?
@@ -225,16 +230,13 @@ Edge Cases
 To clarify
 ==========
 
-* Must place a domino at every turn
+* examples of legal and illegal domino placement
+* battle table to explain the matching of dices
 * When all domnoes are placed, it a deathmatch and players dont die when bloodied
-* Rules to force tile placement
-* Stacking the dominos instead of having them strewned
-* confusing start
-* what to do with extra moves
+* confusing start on the spawn tile
 * Deathmatch: when the dungeon map has been completely explored (all the dominos are placed).
 * Pass when no moves possible
-* Do you need to use all myour steps
-* After dying, you loose you move
+
 
 Strategies
 ==========
@@ -242,6 +244,11 @@ Strategies
 - When no room is available, you can also walk next to a player to attack them or position yourself wisely in order to place a room away from other players.
 - To get goal, fighting a dragon can be more difficult than beating up other players, but they can always fight back on their next turn.
 - Placing a new room always happens once your turn is over. Make sur to place them near to you, but as far as possible from other players.
+
+Tips and Tricks
+===============
+* Stack the dominos in piles instead of having them strewned ?
+
 
 Rule extensions
 ================
@@ -256,13 +263,15 @@ Rule extensions
 * Large rooms: Allow the created of larger rooms of 2x3 tiles.
 * Limited number of lives
 * Downsides of dying ... loosing gold ?
+* Using 4 or 5 tile in hand instead of 3 ?
 
-- You an action to "prepare" for a fight? Add +! to you defense throw ?
 - Rule for longer games ?
 - Rule for shorter games ?
 - Death match ?
 - Monster specific rules
-- Rules when map is fully revealed
+- Cast/race specific rules ?
+- Rules for when the map is fully revealed ?
+- Playing with two sets of dominoes ?
 
 Rule extension: Special actions
 ===============================
@@ -270,5 +279,6 @@ Rule extension: Special actions
 * Magic... Teleport a player to a random tile by throwing two dice.
 * Push/shove... push away a player by winning a dice throw.
 * Rope/Jump: Jump over an empty tile to land on the tile on the other side.
-* 
+* Stealing: Steal gold from another player while hoping over him. Decided with a dice throw.
+* Action to "prepare" for a fight? Add +1 to your defense or attack throw ? Rage/Berzerk ? Focus ? 
 
